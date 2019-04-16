@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Every"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0"
   s.summary          = "Elegant Timer in Swift"
 
   s.homepage         = "https://github.com/Meniny/Every"
@@ -13,6 +13,9 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.10'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
+
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5' }
+  s.swift_version       = '5'
 
   s.source_files = 'Every/**/*'
   # s.public_header_files = 'Every/**/*.h'

@@ -257,71 +257,71 @@ fileprivate extension Every {
 
 // MARK: - Selectors
 fileprivate extension Selector {
-    fileprivate static let Triggered = #selector(Every._trigger(timer:))
+    static let Triggered = #selector(Every._trigger(timer:))
 }
 
 public extension Double {
     /// Instance that runs the specific interval in milliseconds
-    public var milliseconds: Every {
+    var milliseconds: Every {
         return Every(self).milliseconds
     }
 
     /// Instance that runs the specific interval in seconds
-    public var seconds: Every {
+    var seconds: Every {
         return Every(self).seconds
     }
 
     /// /// Instance that runs the specific interval in minutes
-    public var minutes: Every {
+    var minutes: Every {
         return Every(self).minutes
     }
 
     /// Instance that runs the specific interval in hours
-    public var hours: Every {
+    var hours: Every {
         return Every(self).hours
     }
 }
 
 public extension Float {
     /// Instance that runs the specific interval in milliseconds
-    public var milliseconds: Every {
+    var milliseconds: Every {
         return Every(TimeInterval(self)).milliseconds
     }
 
     /// Instance that runs the specific interval in seconds
-    public var seconds: Every {
+    var seconds: Every {
         return Every(TimeInterval(self)).seconds
     }
 
     /// /// Instance that runs the specific interval in minutes
-    public var minutes: Every {
+    var minutes: Every {
         return Every(TimeInterval(self)).minutes
     }
 
     /// Instance that runs the specific interval in hours
-    public var hours: Every {
+    var hours: Every {
         return Every(TimeInterval(self)).hours
     }
 }
 
 public extension Int {
     /// Instance that runs the specific interval in milliseconds
-    public var milliseconds: Every {
+    var milliseconds: Every {
         return Every(TimeInterval(self)).milliseconds
     }
 
     /// Instance that runs the specific interval in seconds
-    public var seconds: Every {
+    var seconds: Every {
         return Every(TimeInterval(self)).seconds
     }
 
     /// /// Instance that runs the specific interval in minutes
-    public var minutes: Every {
+    var minutes: Every {
         return Every(TimeInterval(self)).minutes
     }
 
     /// Instance that runs the specific interval in hours
-    public var hours: Every {
+    var hours: Every {
         return Every(TimeInterval(self)).hours
     }
 }
@@ -330,7 +330,7 @@ public typealias Do = Every
 
 public extension Do {
     @discardableResult
-    public class func this(_ closure: @escaping Do.PerformClosure, every time: Every) -> Every {
+    class func this(_ closure: @escaping Do.PerformClosure, every time: Every) -> Every {
         return time.perform(closure)
     }
 }
